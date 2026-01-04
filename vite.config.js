@@ -6,4 +6,9 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
+  preview: {
+    host: true,
+    port: 4173,
+    allowedHosts: ["smartpath-pbqa.onrender.com"],
+  },
 });
