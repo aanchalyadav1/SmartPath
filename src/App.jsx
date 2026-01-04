@@ -1,28 +1,30 @@
-import React from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import MapArea from './components/MapArea';
-import BottomDrawer from './components/BottomDrawer';
+import React from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import MapArea from "./components/MapArea";
+import BottomDrawer from "./components/BottomDrawer";
+import AIGuide from "./components/AIGuide";
 
 function App() {
   return (
-    <div className="h-screen w-full bg-gray-50 flex flex-col font-sans overflow-hidden">
+    <div className="h-screen w-full bg-gray-50 font-sans overflow-hidden">
       {/* Fixed Header */}
       <Header />
 
-      {/* Main Content Grid */}
-      <main className="flex pt-16 h-full relative">
-        {/* Left Sidebar - Fixed Width */}
+      {/* Main Layout */}
+      <div className="flex h-[calc(100vh-64px)]">
+        {/* Sidebar */}
         <Sidebar />
 
-        {/* Center Map Area - Flex Grow */}
-        <div className="flex-1 relative">
+        {/* Map Container */}
+        <div className="flex-1 relative overflow-hidden">
           <MapArea />
-
-          {/* Bottom Drawer Overlay inside Map Container (or fixed to screen) */}
-          <BottomDrawer />
         </div>
-      </main>
+      </div>
+
+      {/* Global Overlays */}
+      <BottomDrawer />
+      <AIGuide />
     </div>
   );
 }
