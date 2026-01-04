@@ -1,5 +1,6 @@
 import React from "react";
-import { Navigation, MapPin, Wheelchair, ShieldCheck } from "lucide-react";
+import { Navigation, MapPin, Accessibility, ShieldCheck } from "lucide-react";
+
 
 const MapArea = () => {
   return (
@@ -57,7 +58,7 @@ const MapArea = () => {
       {/* Route Explanation Card */}
       <div className="absolute top-20 left-6 z-20 bg-white rounded-2xl shadow-lg p-4 w-64">
         <div className="flex items-center gap-2 mb-2">
-          <Wheelchair className="w-5 h-5 text-teal-600" />
+          <Accessibility className="w-5 h-5 text-teal-600" />
           <h3 className="font-semibold text-gray-900 text-sm">
             Most Accessible Route
           </h3>
